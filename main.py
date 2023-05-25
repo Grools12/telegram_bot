@@ -100,10 +100,10 @@ def button_message(message):
         markup3.add(mem, nop, dal, hou, sas, back_to_div)
         bot.send_message(message.chat.id, "Choose team", reply_markup=markup3)
 
-    full_stats = []
-    stats = list(soup.findAll(class_="right"))
-    for wins in stats:
-        full_stats.append(wins.text)
 
-
-bot.infinity_polling()
+@bot.message_handler(commands=["stop"])
+def stop_command(message):
+    bot.stop_polling()
+    
+    
+bot.polling()
