@@ -99,11 +99,6 @@ def button_message(message):
         sas = types.KeyboardButton("San Antonio Spurs")
         markup3.add(mem, nop, dal, hou, sas, back_to_div)
         bot.send_message(message.chat.id, "Choose team", reply_markup=markup3)
-
-
-@bot.message_handler(commands=["stop"])
-def stop_command(message):
-    bot.stop_polling()
     
     
 bot.polling()
