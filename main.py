@@ -101,4 +101,4 @@ def button_message(message):
         bot.send_message(message.chat.id, "Choose team", reply_markup=markup3)
     
     
-bot.polling()
+bot.polling(none_stop=True)
